@@ -44,21 +44,5 @@
 <body>
     <div id="root"></div>
     <div class="scanline"></div>
-
-    <script>
-      // Принудительная блокировка функций деплоя в опубликованной версии
-      window.IS_PUBLISHED_OVERRIDE = true;
-      console.log("🛡️ СИСТЕМА ЗАПУЩЕНА В РЕЖИМЕ СУВЕРЕННОГО ВЕЩАНИЯ");
-      
-      // Наблюдатель для удаления кнопок, если они появятся
-      const observer = new MutationObserver(() => {
-        document.querySelectorAll('button').forEach(btn => {
-          if (btn.innerText.includes('ВЫПУСТИТЬ САЙТ') || btn.innerText.includes('ДЕПЛОЙ')) {
-            btn.remove();
-          }
-        });
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
-    </script>
-    </body>
+</body>
 </html>
